@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INVISÍVEL | Educação para todos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="#inicio" class="logo">INVISÍVEL<span>.</span></a>
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+
+        <a href="#aulas">Disciplinas</a>
+
+        <a href="#biblioteca">Biblioteca</a>
+
+        <a href="#exercicios">Exercícios</a>
+
+        <a href="#vestibulares">Vestibulares</a>
+
+    </nav>
+
+    <button class="login-btn" onclick="abrirLogin()">Entrar</button>
+
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <span class="tag">EDUCAÇÃO PARA TODOS</span>
+
+        <h1>
+
+            A educação não deveria ser um
+
+            <span>privilégio.</span>
+
+        </h1>
+
+        <p>
+
+            O conhecimento transforma realidades.
+
+            Nosso objetivo é tornar o acesso à educação
+
+            mais acessível, oferecendo materiais de apoio
+
+            e oportunidades de aprendizagem para todos.
+
+        </p>
+
+        <a href="#aulas" class="main-btn">Começar a estudar</a>
+
+    </div>
+
+    <div class="hero-card">
+
+        <span class="book-icon">📚</span>
+
+        <h2>Conhecimento transforma.</h2>
+
+        <p>Seu futuro começa com oportunidades.</p>
+
+    </div>
+
+</section>
+
+<section class="about section">
+
+    <span class="tag">NOSSO PROPÓSITO</span>
+
+    <h2>O que é o INVISÍVEL?</h2>
+
+    <p>
+
+        O INVISÍVEL é uma iniciativa educacional que busca
+
+        diminuir as barreiras de acesso ao conhecimento.
+
+        A plataforma reúne conteúdos, materiais gratuitos,
+
+        exercícios e recursos de preparação para vestibulares,
+
+        contribuindo para uma educação mais democrática.
+
+    </p>
+
+</section>
+
+<section class="section" id="aulas">
+
+    <span class="tag">APRENDA NO SEU RITMO</span>
+
+    <h2>Explore nossos conteúdos</h2>
+
+    <p class="subtitle">Escolha uma disciplina e comece a aprender.</p>
+
+    <div class="search-area">
+
+        <input type="text" id="busca"
+
+            placeholder="Pesquisar disciplina...">
+
+        <button onclick="pesquisar()">Pesquisar</button>
+
+    </div>
+
+    <div class="cards" id="cards-aulas">
+
+        <article class="card">
+
+            <span class="card-icon">📐</span>
+
+            <h3>Matemática</h3>
+
+            <p>Fórmulas, conceitos e exercícios.</p>
+
+            <button onclick="mostrarConteudo('Matemática')">Acessar</button>
+
+        </article>
+
+        <article class="card">
+
+            <span class="card-icon">🧬</span>
+
+            <h3>Biologia</h3>
+
+            <p>Seres vivos, genética e ecologia.</p>
+
+            <button onclick="mostrarConteudo('Biologia')">Acessar</button>
+
+        </article>
+
+        <article class="card">
+
+            <span class="card-icon">📖</span>
+
+            <h3>Português</h3>
+
+            <p>Gramática, interpretação e redação.</p>
+
+            <button onclick="mostrarConteudo('Português')">Acessar</button>
+
+        </article>
+
+        <article class="card">
+
+            <span class="card-icon">🌎</span>
+
+            <h3>Geografia</h3>
+
+            <p>Sociedade, território e atualidades.</p>
+
+            <button onclick="mostrarConteudo('Geografia')">Acessar</button>
+
+        </article>
+
+        <article class="card">
+
+            <span class="card-icon">⚗️</span>
+
+            <h3>Química</h3>
+
+            <p>Elementos, matéria e reações.</p>
+
+            <button onclick="mostrarConteudo('Química')">Acessar</button>
+
+        </article>
+
+        <article class="card">
+
+            <span class="card-icon">⚡</span>
+
+            <h3>Física</h3>
+
+            <p>Energia, movimento e fenômenos.</p>
+
+            <button onclick="mostrarConteudo('Física')">Acessar</button>
+
+        </article>
+        <article class="card">
+
+    <span class="card-icon">📜</span>
+
+    <h3>História</h3>
+
+    <p>História do Brasil, guerras e revoluções.</p>
+
+    <button onclick="mostrarConteudo('historia')">Acessar</button>
+
+</article>
+
+<article class="card">
+
+    <span class="card-icon">💭</span>
+
+    <h3>Filosofia</h3>
+
+    <p>Ética, política e pensamento filosófico.</p>
+
+    <button onclick="mostrarConteudo('filosofia')">Acessar</button>
+
+</article>
+
+<article class="card">
+
+    <span class="card-icon">🇬🇧</span>
+
+    <h3>Inglês</h3>
+
+    <p>Vocabulário, gramática e interpretação.</p>
+
+    <button onclick="mostrarConteudo('ingles')">Acessar</button>
+
+</article>
+
+<article class="card">
+
+    <span class="card-icon">🎨</span>
+
+    <h3>Artes</h3>
+
+    <p>Movimentos artísticos e cultura.</p>
+
+    <button onclick="mostrarConteudo('artes')">Acessar</button>
+
+</article>
+
+<article class="card">
+
+    <span class="card-icon">👥</span>
+
+    <h3>Sociologia</h3>
+
+    <p>Sociedade, cultura e desigualdade.</p>
+
+    <button onclick="mostrarConteudo('sociologia')">Acessar</button>
+
+</article>
+
+<article class="card">
+
+    <span class="card-icon">📚</span>
+
+    <h3>Literatura</h3>
+
+    <p>Escolas literárias e autores brasileiros.</p>
+
+    <button onclick="mostrarConteudo('literatura')">Acessar</button>
+
+</article>
+
+<article class="card">
+
+    <span class="card-icon">✍️</span>
+
+    <h3>Redação</h3>
+
+    <p>Argumentação e produção textual.</p>
+
+    <button onclick="mostrarConteudo('redacao')">Acessar</button>
+
+</article>
+
+    </div>
+
+    <div id="resultado-busca"></div>
+
+</section>
+<!-- BIBLIOTECA -->
+
+<section class="section" id="biblioteca">
+
+    <span class="tag">MATERIAIS GRATUITOS</span>
+
+    <h2>Biblioteca digital</h2>
+
+    <p class="subtitle">Encontre materiais para complementar seus estudos.</p>
+
+    <div id="lista-biblioteca" class="cards"></div>
+
+</section>
+
+<!-- EXERCÍCIOS -->
+
+<section class="section" id="exercicios">
+
+    <span class="tag">PRATIQUE SEUS CONHECIMENTOS</span>
+
+    <h2>Área de exercícios</h2>
+
+    <p class="subtitle">Escolha uma matéria e seu nível de dificuldade.</p>
+
+    <div class="filtros">
+
+        <select id="filtro-disciplina">
+
+            <option value="todas">Todas as disciplinas</option>
+
+        </select>
+
+        <select id="filtro-dificuldade">
+
+            <option value="todas">Todas as dificuldades</option>
+
+            <option value="facil">Fácil</option>
+
+            <option value="medio">Médio</option>
+
+            <option value="dificil">Difícil</option>
+
+        </select>
+
+        <button onclick="mostrarQuestao()">Buscar questões</button>
+
+    </div>
+
+    <div id="area-questao"></div>
+
+    <div id="resultado-questao"></div>
+
+</section>
+
+<!-- VESTIBULARES -->
+
+<section class="section" id="vestibulares">
+
+    <span class="tag">PREPARE SEU FUTURO</span>
+
+    <h2>Preparação para vestibulares</h2>
+
+    <p class="subtitle">Conheça os principais processos seletivos.</p>
+
+    <div id="lista-vestibulares" class="cards"></div>
+
+</section>
+<!-- FINAL DO CADASTRO -->
+
+ <!-- MODAL DE LOGIN -->
+
+<div class="modal" id="modal-login">
+
+    <div class="modal-conteudo">
+
+        <h2>Entrar no INVISÍVEL</h2>
+
+        <p>Acesse sua conta para continuar estudando.</p>
+
+        <form onsubmit="entrar(event)">
+
+            <label>E-mail</label>
+
+            <input type="email" id="email-login" placeholder="Digite seu e-mail" required>
+
+            <label>Senha</label>
+
+            <input type="password" id="senha-login" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+
+        </form>
+
+        <button onclick="fecharLogin()">Fechar</button>
+
+    </div>
+
+</div>   
+<div class="modal" id="modal-cadastro">
+
+        <div class="modal-content">
+
+            <button class="fechar" onclick="fecharCadastro()">×</button>
+
+            <h2>Crie sua conta</h2>
+
+            <p>Faça parte do INVISÍVEL.</p>
+
+            <form onsubmit="cadastrar(event)">
+
+                <input type="text" id="nome-cadastro"
+
+                    placeholder="Seu nome" required>
+
+                <input type="email" id="email-cadastro"
+
+                    placeholder="Seu e-mail" required>
+
+                <input type="password" id="senha-cadastro"
+
+                    placeholder="Crie uma senha" required>
+
+                <button type="submit" class="main-btn">
+
+                    Cadastrar
+
+                </button>
+
+            </form>
+
+            <p id="mensagem-cadastro"></p>
+
+        </div>
+
+    </div>
+
+<footer>
+
+    <h2>INVISÍVEL<span>.</span></h2>
+
+    <p>A educação não deveria ser um privilégio.</p>
+
+    <p>Projeto de democratização do acesso à educação.</p>
+
+    <small>© 2026 INVISÍVEL. Todos os direitos reservados.</small>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
